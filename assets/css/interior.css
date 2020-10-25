@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Belwe';
+    src: url('../belwe-condensed.woff2') format('woff2'),
+         url('../belwe-condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+  background: black;
+  font-family: "Belwe", sans;
+  font-size: 90px;
+  line-height: 1;
+  margin-top: 30px;
+  }
+
+/* Header Icon */
+
+.header {
+  text-align: center;
+    }
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  opacity: 70%;
+  line-height: 1.3;
+}
+
+.title:hover {
+  opacity: 100%;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.eyes {
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes shake {
+  0% { transform: translate(.5px, .5px) rotate(0deg); }
+  10% { transform: translate(-.5px, -.5px) rotate(-.5deg); }
+  20% { transform: translate(-.5px, 0px) rotate(.5deg); }
+  30% { transform: translate(1px, 1px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(.5deg); }
+  50% { transform: translate(-1px, .5px) rotate(-.5deg); }
+  60% { transform: translate(-.5px, 1px) rotate(0deg); }
+  70% { transform: translate(1px, 1px) rotate(-.5deg); }
+  80% { transform: translate(-1px, -.5px) rotate(.5deg); }
+  90% { transform: translate(.5px, .5px) rotate(0deg); }
+  100% { transform: translate(1px, -1px) rotate(-.5deg); }
+}
+
+/* Main Page Content */
+
+p {
+  color: white;
+  display: inline;
+    }
+
+.content {
+  margin-left: 100px;
+}
+   
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  flex-direction: row;
+  }
+
+.breakfast {
+  width: 700px;
+  height: 700px;
+  filter: grayscale(100%);
+}
+
+
+/* Text and Image Animation */
+
+.text1 {
+animation: appear 3s ease 1s;
+animation-fill-mode: backwards;
+}
+
+.text2 {
+animation: appear 3s ease 3s;
+animation-fill-mode: backwards;
+}
+
+.red {
+  animation: red 3s ease 4s forwards;
+}
+
+@keyframes appear{
+ 0% {
+  opacity: 0%;
+}
+100% {
+    opacity: 100%;
+}
+}
+
+@keyframes red{
+   0% {
+  color: white;
+}
+100% {
+    color: #ba0025;
+}
+}
+
+.breakfast {
+  animation: image_red 3s ease 4s forwards;
+}
+
+@keyframes image_red {
+0% {
+  filter: grayscale(100%);
+}
+100% {
+  filter: grayscale(0%);
+}}
+
+
+/* Audio Player */
+
+audio::-webkit-media-controls-play-button {
+    color: white;
+  }
+audio::-webkit-media-controls-panel {
+  background-color: #2e2e2e;
+ }
+ audio::-webkit-media-controls-enclosure {
+  background: -internal-light-dark(rgb(100, 0, 0), rgb(59, 59, 59));
+}
+audio::-webkit-media-controls-current-time-display {
+  text-shadow: -internal-light-dark(rgb(0, 0, 0), rgb(59, 59, 59)) 0px 0px 10px;
+}
+
+
